@@ -1,8 +1,8 @@
-# RootNet Research Series: v5.8.0 to v6.7
+# RootNet Research Series: v5.8.0 to v6.8
 
-**Status date:** 2026-08-21  
-**Latest packaged assay:** v6.7 causal-separation development assay  
-**Latest completed confirmatory evaluation:** v6.6 r2 rotation-equivalence audit  
+**Status date:** 2026-08-22  
+**Latest packaged assay:** v6.8 confirmed `+0.035` water-field repair  
+**Latest completed confirmatory evaluation:** v6.8 fixed-candidate evaluation  
 **Frozen ecological baseline:** v5.8.0
 
 ## Read This First
@@ -23,6 +23,7 @@ v6.0  evolutionary kernel
                                 └─▶ v6.5  dynamic-environment comparison
                                       └─▶ v6.6  continuous coordinates and rotation audit
                                             └─▶ v6.7  water-field/necrosis cause separation
+                                                  └─▶ v6.8  fixed +0.035 water-capacity repair
 ```
 
 - **v5.8.0 remains the reference for the original carbon/water/nitrogen transport ON/OFF and drought results.**
@@ -32,6 +33,7 @@ v6.0  evolutionary kernel
 - **v6.4 and v6.5 test whether history-dependent adaptive conductance adds a detectable benefit over fixed conductance.** v6.4 found no clear difference in the normal artificial environment. v6.5 also found no clear difference across its dynamic environments, but its formal status is `COMPLETED_WITH_PROTOCOL_DEVIATION` because 13 early-extinction runs were not padded with zeros through tick 360 in one endpoint calculation.
 - **v6.6 is a continuous-coordinate engineering audit.** Its three primary geometric endpoints passed all 24 preregistered rotation-equivalence comparisons, but 274/300 runs became extinct before tick 360 and active-patch uptake occurred in only 10/300 runs. Rotation equivalence is not evidence of ecological health.
 - **v6.7 is a completed 160-run development assay, not a confirmatory evaluation.** It classified the v6.6 water field as the dominant tested cause of the observed collapse. Its sealed result is retained as a reference-runtime result; cross-platform portability of its byte-exact dynamic-state digest remains unresolved.
+- **v6.8 is a completed fixed-candidate confirmatory evaluation.** After exploratory calibration, `water_capacity_lift = 0.035`, the acceptance criteria, and 20 evaluation-critical files were sealed before 30 completely unused confirmatory seeds were generated. All 120 control/candidate runs (60 pairs) completed, all eight predeclared checks passed, and the verdict was `V6_8_LIFT_0_035_CONFIRMED`.
 
 All versions are artificial systems. None is calibrated to predict a real fungal species, forest, mycorrhizal network, or evolutionary history.
 
@@ -51,6 +53,7 @@ All versions are artificial systems. None is calibrated to predict a real fungal
 | **v6.5 r2** | Dynamic-environment stress test | Same core body and transport network as v6.4 | Fixed versus adaptive conductance under four environmental schedules | 240-run evaluation completed with a protocol deviation; all eight primary comparisons remained `NO_CLEAR_DIFFERENCE` in the prespecified analysis and zero-padded sensitivity analysis |
 | **v6.6 r2** | Continuous-coordinate rotation audit | Modules and edges in continuous 2-D coordinates | Euclidean geometry, bilinear field coupling, and fixed/adaptive transport | 300-run confirmatory engineering audit completed; 24/24 primary rotation comparisons were equivalent within ±5%, but the assay showed severe ecological collapse |
 | **v6.7** | Causal-separation development assay | Same continuous-coordinate system as v6.6 | Two water fields crossed with immediate versus 5-tick-delayed necrosis response | 160 development runs completed; `WATER_FIELD_DOMINANT` in the sealed reference runtime; no v6.7 confirmatory evaluation was designed or run |
+| **v6.8** | Fixed water-field repair | Same continuous-coordinate system as v6.7 | Exact `clamp(v66_water + 0.035, 0.08, 1.00)` environmental water-capacity field versus the v6.6 control | 120-run, 30-seed paired confirmatory evaluation completed; all eight predeclared checks passed; `V6_8_LIFT_0_035_CONFIRMED` |
 
 ### Which version should I use?
 
@@ -63,6 +66,7 @@ All versions are artificial systems. None is calibrated to predict a real fungal
 - Use **v6.5 r2** to inspect the dynamic-environment comparison, while retaining its protocol-deviation label.
 - Use **v6.6 r2** to audit continuous-coordinate rotation equivalence, not as evidence that the ecological balance or nutrient-patch assay is healthy.
 - Use **v6.7** to inspect the completed water-field/necrosis development diagnosis. Do not treat its diagnostic water field as a final model choice or its development seeds as confirmatory evidence.
+- Use **v6.8** to inspect the confirmed `+0.035` artificial-system water-field repair and its paired control/candidate result. Do not interpret `0.035` as a real-fungus water calibration or the fuller terminal image as morphological validation.
 
 Results and counts should not be compared across versions as though only one parameter changed. The models change their life cycle, biological unit, resource accounting, death definitions, and research question.
 
@@ -78,11 +82,13 @@ Interpret verification outputs separately:
 
 A portability warning is not automatically harmless either. If the claim depends on cross-platform replay, compare discrete IDs, events, counts, and topology exactly; compare continuous values with prespecified tolerances; and classify any discrete trajectory divergence separately from harmless last-bit numerical drift.
 
-For exact sealed replay, use the runtime declared by the package. The reference policy prepared for the next package is **Windows 11 x86-64 with CPython 3.14.5**. Other platforms may run the model, but byte-exact dynamic-state reproduction is not promised. v6.7 should currently be reported as:
+For exact sealed replay, use the runtime declared by the package. The v6.8 reference validation environment is **Windows 11 x86-64 with CPython 3.14.5**. Other platforms may run the model, but byte-exact dynamic-state reproduction is not promised. v6.7 should still be reported as:
 
 > `WATER_FIELD_DOMINANT — sealed reference-runtime result; cross-platform portability audit pending`
 
 This qualification does not erase the sealed Windows result. It limits the claim about cross-platform replay until the full assay is independently rerun or compared semantically on another platform.
+
+The v6.8 package reports artifact integrity, mechanical validation, the inherited v6.6 reference-runtime regression, and confirmatory-result reproduction separately. Its clean-extraction verification passed in the reference runtime.
 
 ---
 
@@ -183,6 +189,50 @@ The supported interpretation is that chronic water limitation in the v6.6 water 
 The v6.5-equivalent water field was a diagnostic condition, not a selected final repair. Only one founder had a positive initial water balance under that field. No v6.7 confirmatory evaluation was designed or run, and no real-organism calibration was attempted. The correct current label, including the runtime limitation described above, is:
 
 > `WATER_FIELD_DOMINANT — sealed reference-runtime result; cross-platform portability audit pending`
+
+---
+
+## What v6.8 Established
+
+v6.8 fixed one candidate before confirmatory evaluation:
+
+```text
+v68_water = clamp(v66_water + 0.035, 0.08, 1.00)
+```
+
+This is a lift to the **environmental water-capacity field** and the environmental water stock initialized from it. It is not an increase in an individual module's internal water-storage limit. Substrate, patch geometry, growth, branching, transport, conductance, immediate necrosis, detritus, spores, fusion, rotation, and keyed randomness were held fixed.
+
+The candidate value, acceptance criteria, protocol, model, tests, and evaluation code were sealed before 30 completely unused confirmatory seeds were generated. Each seed was paired across the v6.6 radial control and the v6.8 candidate under fixed and adaptive equalization transport, for 120 completed runs.
+
+| Confirmatory endpoint | v6.6 control | v6.8 `+0.035` |
+|---|---:|---:|
+| Ecosystem extinction | 50/60 = 0.833 | 12/60 = 0.200 |
+| Median mean living modules | 8.96 | 12.80 |
+| Median mean total hyphal length | 7.40 | 10.71 |
+| Median mean tips | 3.65 | 5.03 |
+| Median mean branch modules | 0.95 | 1.68 |
+| Pooled cumulative necrosis fraction | 0.978 | 0.822 |
+| Median water-limited module-tick fraction | 0.233 | 0.231 |
+
+Candidate extinction was 7/30 under fixed transport and 5/30 under adaptive transport. The candidate/control ratios of medians were 1.447 for hyphal length, 1.380 for tips, and 1.768 for branch modules. Transport-specific paired improvement counts were 30/30, 28/30, and 28/30 for fixed length, tips, and branches, and 30/30, 29/30, and 27/30 under adaptive transport. All exceeded their predeclared thresholds. The maximum mechanical error was `1.78e-15`. The confirmatory verdict was **`V6_8_LIFT_0_035_CONFIRMED`**.
+
+The supported interpretation is narrow:
+
+> In this fixed artificial system, a small increase in local environmental water capacity reduced whole-ecosystem extinction and cumulative necrosis while increasing living-module, hyphal-length, tip, and branch endpoints, without erasing partial necrosis or reversing the result across the two transport modes.
+
+The nearly unchanged median water-limited module-tick fraction shows that the result cannot be summarized as simply eliminating exposure to water-limited ticks. The confirmatory summary did not establish whether shortfalls became shallower, occurred at different modules or times, or were converted into different growth and death histories through path dependence.
+
+It also did not test whether preserved graph connectivity mediated the extinction reduction. Largest-component fraction, bridge loss, fragmentation timing, post-necrosis reconnection, and related topology-mediated pathways were not predeclared acceptance endpoints. "Preventing spatial holes" is therefore a plausible follow-up hypothesis, not an established mechanism.
+
+### Relationship to the v5.8.0 drought result
+
+An insurance interpretation is useful only if kept explicitly hypothetical. v5.8.0 showed that resource transport reduced deaths under all tested rainfall regimes, but under natural rainfall its reduction in births and growth was larger, leaving fewer final survivors. Under the 120-day drought, reduced water deficiency and deaths coincided with more final survivors. This supports a **stress-dependent tradeoff in redistribution**, not a demonstrated mechanism that stored resources during normal times for later use.
+
+Likewise, v6.8 supports a benefit from a small local environmental water-capacity margin, but it does not yet demonstrate "spatial insurance" through connectivity preservation. Because v5.8.0 and v6.8 use different biological units, life cycles, and resource accounting, their results do not establish one unified two-layer insurance mechanism.
+
+The bounded cross-version hypothesis is:
+
+> Resource redistribution in v5.8.0 and local environmental water margin in v6.8 may both alter the probability of crossing catastrophic failure thresholds. A temporal-insurance plus spatial-insurance interpretation is a useful research hypothesis, not a result already demonstrated across the series.
 
 ---
 
@@ -303,6 +353,12 @@ The primary engineering audit passed, but the ecological diagnostics revealed wi
 v6.7 preserved the v6.6 r2 baseline and used a new seed namespace to separate water-field effects, necrosis-grace effects, and their interaction. A five-tick grace tolerates five consecutive shortfall ticks; the existing vitality-decay rule begins on the sixth, and a fully paid tick resets the counter. It does not weaken the decay coefficient. The package also added founder-level water budgets, resource-limited module-ticks, first-necrosis time, cumulative necrosis, patch-distance, and uptake diagnostics.
 
 The development assay classified the tested water-field change as dominant. This result diagnoses v6.6 but does not select a final repaired ecology. See [What v6.7 Established](#what-v67-established).
+
+### v6.8 — Fixed `+0.035` water-field repair
+
+v6.8 retained the v6.6/v6.7 continuous-coordinate dynamics and changed only the environmental water-capacity field to exact `clamp(v66_water + 0.035, 0.08, 1.00)`. An initial `+0.15` development candidate produced fuller networks but zero whole-ecosystem extinctions in 40/40 candidate runs and failed its predeclared 10–50% extinction window. Separate exploratory seed namespaces located the transition near `+0.03` to `+0.04`; these calibration results were not used as final evidence.
+
+The `+0.035` value, confirmatory criteria, and critical files were then fixed before a new 30-seed paired evaluation. The final 120-run evaluation passed all eight criteria and classified the candidate `V6_8_LIFT_0_035_CONFIRMED`. See [What v6.8 Established](#what-v68-established).
 
 ---
 
@@ -496,6 +552,7 @@ Per-parent, per-day, and per-resource details are stored in the accompanying JSO
 - v6.5 records that no clear adaptive effect was detected under its four tested schedules, subject to the permanent protocol-deviation qualification; this is not an equivalence claim.
 - v6.6 supports engineering rotation equivalence for three geometric endpoints within the preregistered ±5% bounds; it simultaneously documents an ecologically collapsed assay state.
 - v6.7 supports `WATER_FIELD_DOMINANT` only as a sealed development result in the reference runtime. Cross-platform replay remains pending, and the diagnostic water field is not a final repair.
+- v6.8 supports `V6_8_LIFT_0_035_CONFIRMED` inside its fixed artificial system: candidate extinction remained within the predeclared 10–50% window, extinction fell by more than 25 percentage points relative to control, partial necrosis remained present, mechanical tolerances passed, and predeclared hyphal-length, tip, branch, paired-improvement, and transport-direction criteria all passed.
 
 ### Not established
 
@@ -510,8 +567,11 @@ Per-parent, per-day, and per-resource details are stored in the accompanying JSO
 - long-term evolutionary-fitness advantage of transport, an optimal sharing rate, or the drought frequency required for sharing to evolve;
 - operational speciation, coevolving symbiotic partners, or evolution of adaptive conductance;
 - ecological health inferred from rotation equivalence alone;
-- cross-platform byte-identical simulation trajectories for v6.4–v6.7;
-- a final corrected water field or a confirmatory v6.7 ecological result;
+- cross-platform byte-identical simulation trajectories for v6.4–v6.8;
+- biological correctness, real-world optimality, or species calibration of the v6.8 `+0.035` water-capacity lift;
+- connectivity preservation as the mediator of the v6.8 extinction reduction;
+- a demonstrated temporal-insurance plus spatial-insurance mechanism linking v5.8.0 and v6.8;
+- the magnitude, duration, timing, or module identity of water shortfalls as the established mediator of the v6.8 result;
 - calibration of any model parameter to a real fungal species.
 
 In the later spatial v6 packages, growth locations, topology, resource histories, necrosis, fragmentation, germination, and lineage outcomes are generated from local state and keyed stochastic events. The author still supplies fungal-like primitives such as tips, edges, extension, spores, and anastomosis. The viewer remains observational and does not feed back into the dynamics.
@@ -583,7 +643,7 @@ To reproduce the sealed 30-seed evaluation:
 python experiment_v6_3.py --ticks 360 --replicates 30 --output reproduced_evaluation_v6_3.json
 ```
 
-### v6.4 through v6.7
+### v6.4 through v6.8
 
 Each later package includes its own version-specific commands and sealed settings. Start with the non-mutating package checks from the extracted package directory:
 
@@ -592,9 +652,9 @@ python -m unittest discover -s tests -v
 python verify_package.py
 ```
 
-Do not launch or alter a sealed evaluation merely to test installation. Follow the package protocol for the exact experiment command, dimensions, ticks, conditions, and locked seed list. A v6.5 replay must retain the published protocol-deviation label, and v6.7 has no confirmatory evaluation to reproduce.
+Do not launch or alter a sealed evaluation merely to test installation. Follow the package protocol for the exact experiment command, dimensions, ticks, conditions, and locked seed list. A v6.5 replay must retain the published protocol-deviation label, and v6.7 has no confirmatory evaluation to reproduce. The v6.8 package contains its sealed critical-file record, locked confirmatory seeds, 120-run result, and reproducing acceptance logic.
 
-Python 3.10 or newer is sufficient for v6.1–v6.3; the packages use the standard library. v6.0 recommends Python 3.11 or newer. For v6.4–v6.7, use the exact runtime declared inside the package for byte-level sealed replay and read [Numerical portability and operating-system differences](#numerical-portability-and-operating-system-differences) before interpreting a digest mismatch.
+Python 3.10 or newer is sufficient for v6.1–v6.3; the packages use the standard library. v6.0 recommends Python 3.11 or newer. For v6.4–v6.8, use the exact runtime declared inside the package for byte-level sealed replay and read [Numerical portability and operating-system differences](#numerical-portability-and-operating-system-differences) before interpreting a digest mismatch.
 
 ---
 
@@ -611,6 +671,7 @@ The v6 line is distributed as separate packages:
 - `RootNet_v6_5_dynamic_environment_r2.zip`
 - `RootNet_v6_6_r2_continuous_coordinates.zip`
 - `RootNet_v6_7_causal_separation.zip`
+- `RootNet_v6_8_lift_0_035_confirmed.zip`
 
 Each ZIP has a companion `_SHA256.txt` file. Inside the packages:
 
@@ -628,12 +689,13 @@ The v6.3 package additionally contains:
 - `evaluation_v6_3.json` — machine-readable evaluation data;
 - `experiment_v6_3.py` — evaluation reproducer.
 
-The v6.4–v6.7 distributions additionally provide version-specific preregistered protocols, locked seed lists, validation records, machine-readable evaluation or development results, and companion seal/hash records. Keep these paired with the exact package revision. In particular:
+The v6.4–v6.8 distributions additionally provide version-specific preregistered protocols, locked seed lists, validation records, machine-readable evaluation or development results, and companion seal/hash records. Keep these paired with the exact package revision. In particular:
 
 - v6.4 r2 is the evaluated simplified adaptive-conductance package; the earlier extended prototype is not the evaluation package;
 - v6.5 r2 must remain labeled `COMPLETED_WITH_PROTOCOL_DEVIATION`;
 - v6.6 r2 separates three primary rotation endpoints from auxiliary active-patch uptake;
 - v6.7 is a causal-separation development package with 160 completed runs and zero confirmatory evaluation runs.
+- v6.8 fixes `water_capacity_lift=0.035`, retains a 20-file pre-seed critical seal, and contains 120 completed confirmatory control/candidate runs with verdict `V6_8_LIFT_0_035_CONFIRMED`.
 
 The packaged v6.3 ZIP SHA-256 is:
 
@@ -649,7 +711,8 @@ Later sealed package ZIP hashes recorded in the development logs are:
 | v6.5 r2 | `7769910BD7408F393B240E074DCC7FF52785FDA5F1404D08C6D07AE3ACFD7C50` |
 | v6.6 r2 | `AC6CFB094D5C14A263E1C9A39B3C946B7E6ECA61B022239C8F3AA1643DB804E2` |
 | v6.7 causal-separation package | `BD21398C6F262257CB3E5B9FDEC6A84339ADADDCC974E4AD3F82861D406B5F49` |
+| v6.8 confirmed `+0.035` | `771A0033AE13994990F9F53DA0FB84B68DB9ABEE04EE90F13D2A627BCE0DD932` |
 
-The later outer archive `RootNet_v6_7_Causal_Separation_SEALED_2026-08-21.zip` has SHA-256 `D7FB473A68AE780FF661856644C5398006D857A190D3A727CF320EC2C7054F31`; it contains the unchanged inner v6.7 package. Package hashes establish artifact identity, not cross-platform equality of regenerated floating-point state digests.
+The later outer archive `RootNet_v6_7_Causal_Separation_SEALED_2026-08-21.zip` has SHA-256 `D7FB473A68AE780FF661856644C5398006D857A190D3A727CF320EC2C7054F31`; it contains the unchanged inner v6.7 package. The v6.8 hash above is for `RootNet_v6_8_lift_0_035_confirmed.zip`. Package hashes establish artifact identity, not cross-platform equality of regenerated floating-point state digests.
 
 Do not overwrite the frozen v5.8.0 baseline or an earlier v6 package when working with a later version. Extract each version into its own directory and retain its matching hash and validation records.
